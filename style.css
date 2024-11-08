@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    position: relative; /* Adiciona posicionamento relativo para o botão */
+}
+
+.theme-container {
+    position: absolute; /* Posiciona o botão no canto superior direito */
+    top: 10px; /* Ajusta a distância do topo */
+    right: 10px; /* Ajusta a distância da direita */
+}
+
+.game-container {
+    display: flex;
+}
+
+.scoreboard {
+    margin-right: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none; /* Evita que o texto seja selecionado ao clicar */
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+#restart, #resetScore, #toggleTheme {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #33a047;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#restart:hover, #resetScore:hover, #toggleTheme:hover {
+    background-color: #28a037;
+}
+
+#timer {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #c72027; /* Cor do texto do timer */
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333; /* Cor do texto do placar */
+}
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark .cell {
+    background-color: #555;
+    border-color: #777;
+}
